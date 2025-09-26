@@ -100,9 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSakuraButtonText();
     
     // Event Listener für Buttons
-    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-    document.getElementById('sakuraToggle').addEventListener('click', toggleSakura);
-});
+    var _theme=document.getElementById('themeToggle'); if(_theme){_theme.addEventListener('click', toggleTheme);} var _sakura=document.getElementById('sakuraToggle'); if(_sakura){_sakura.addEventListener('click', toggleSakura);} });
 
 
 // --- Settings-Dropdown ---

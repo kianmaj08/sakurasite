@@ -1,56 +1,177 @@
 backend:
   name: git-gateway
   branch: main
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
-
+media_folder: assets/uploads
+public_folder: /assets/uploads
 collections:
-  - name: "powerpoints"
-    label: "Powerpoints"
-    label_singular: "Powerpoint"
-    file: "sakurasite-main/content/powerpoints.json"
-    format: "json"
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Beschreibung", name: "description", widget: "text"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Tags (Fächer)", name: "tags", widget: "select", multiple: true, options: ["Deutsch","Mathe","Englisch","Geschichte","Philosophie","Informatik","Physik","Kunst","Erdkunde","Sowi","Chemie"]}
-      - {label: "Status", name: "status", widget: "select", options: ["Fertig","In Arbeit","Test","Coming soon"], default: "Test"}
-
-  - name: "videos"
-    label: "Videos"
-    file: "sakurasite-main/content/videos.json"
-    format: "json"
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Beschreibung", name: "description", widget: "text"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Tags (Fächer)", name: "tags", widget: "select", multiple: true, options: ["Deutsch","Mathe","Englisch","Geschichte","Philosophie","Informatik","Physik","Kunst","Erdkunde","Sowi","Chemie"]}
-      - {label: "Status", name: "status", widget: "select", options: ["Fertig","In Arbeit","Test","Coming soon"], default: "Test"}
-
-  - name: "taskcards"
-    label: "Taskcards"
-    file: "sakurasite-main/content/taskcards.json"
-    format: "json"
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Beschreibung", name: "description", widget: "text"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Tags (Fächer)", name: "tags", widget: "select", multiple: true, options: ["Deutsch","Mathe","Englisch","Geschichte","Philosophie","Informatik","Physik","Kunst","Erdkunde","Sowi","Chemie"]}
-      - {label: "Status", name: "status", widget: "select", options: ["Fertig","In Arbeit","Test","Coming soon"], default: "Test"}
-
-  - name: "spiele"
-    label: "Spiele"
-    file: "sakurasite-main/content/spiele.json"
-    format: "json"
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Beschreibung", name: "description", widget: "text"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Tags (Fächer)", name: "tags", widget: "select", multiple: true, options: ["Deutsch","Mathe","Englisch","Geschichte","Philosophie","Informatik","Physik","Kunst","Erdkunde","Sowi","Chemie"]}
-      - {label: "Status", name: "status", widget: "select", options: ["Fertig","In Arbeit","Test","Coming soon"], default: "Test"}
+- name: powerpoints
+  label: Powerpoints
+  label_singular: Powerpoint
+  file: content/powerpoints.json
+  format: json
+  fields:
+  - label: Titel
+    name: title
+    widget: string
+  - label: Beschreibung
+    name: description
+    widget: text
+  - label: Autor
+    name: author
+    widget: string
+  - label: Link
+    name: link
+    widget: string
+  - label: Tags (Fächer)
+    name: tags
+    widget: select
+    multiple: true
+    options:
+    - Deutsch
+    - Mathe
+    - Englisch
+    - Geschichte
+    - Philosophie
+    - Informatik
+    - Physik
+    - Kunst
+    - Erdkunde
+    - Sowi
+    - Chemie
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - Fertig
+    - In Arbeit
+    - Test
+    - Coming soon
+    default: Test
+- name: videos
+  label: Videos
+  file: content/videos.json
+  format: json
+  fields:
+  - label: Titel
+    name: title
+    widget: string
+  - label: Beschreibung
+    name: description
+    widget: text
+  - label: Autor
+    name: author
+    widget: string
+  - label: Link
+    name: link
+    widget: string
+  - label: Tags (Fächer)
+    name: tags
+    widget: select
+    multiple: true
+    options:
+    - Deutsch
+    - Mathe
+    - Englisch
+    - Geschichte
+    - Philosophie
+    - Informatik
+    - Physik
+    - Kunst
+    - Erdkunde
+    - Sowi
+    - Chemie
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - Fertig
+    - In Arbeit
+    - Test
+    - Coming soon
+    default: Test
+- name: taskcards
+  label: Taskcards
+  file: content/taskcards.json
+  format: json
+  fields:
+  - label: Titel
+    name: title
+    widget: string
+  - label: Beschreibung
+    name: description
+    widget: text
+  - label: Autor
+    name: author
+    widget: string
+  - label: Link
+    name: link
+    widget: string
+  - label: Tags (Fächer)
+    name: tags
+    widget: select
+    multiple: true
+    options:
+    - Deutsch
+    - Mathe
+    - Englisch
+    - Geschichte
+    - Philosophie
+    - Informatik
+    - Physik
+    - Kunst
+    - Erdkunde
+    - Sowi
+    - Chemie
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - Fertig
+    - In Arbeit
+    - Test
+    - Coming soon
+    default: Test
+- name: spiele
+  label: Spiele
+  file: content/spiele.json
+  format: json
+  fields:
+  - label: Titel
+    name: title
+    widget: string
+  - label: Beschreibung
+    name: description
+    widget: text
+  - label: Autor
+    name: author
+    widget: string
+  - label: Link
+    name: link
+    widget: string
+  - label: Tags (Fächer)
+    name: tags
+    widget: select
+    multiple: true
+    options:
+    - Deutsch
+    - Mathe
+    - Englisch
+    - Geschichte
+    - Philosophie
+    - Informatik
+    - Physik
+    - Kunst
+    - Erdkunde
+    - Sowi
+    - Chemie
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - Fertig
+    - In Arbeit
+    - Test
+    - Coming soon
+    default: Test
+local_backend: true
+publish_mode: simple

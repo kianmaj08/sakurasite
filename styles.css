@@ -619,3 +619,41 @@ a.btn-link {
 }
 .settings-item:hover { background: rgba(255,255,255,.2); }
 
+
+
+/* === Clean Navbar === */
+.main-nav {
+  background: transparent;
+  margin: 0 auto;
+  padding: .6rem 1rem;
+  max-width: 1100px;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.nav-link {
+  padding: .4rem 0;
+  text-decoration: none;
+  color: var(--primary-color);
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.25s ease;
+}
+.nav-link:hover::after {
+  background: rgba(255,255,255,0.45);
+}
+.nav-link.active::after {
+  background: var(--primary-color);
+}
+
