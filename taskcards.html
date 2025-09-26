@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taskcards – Oberstufe.site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sakura-container" id="sakuraContainer"></div>
+  <header>
+    <a href="index.html" class="logo">Oberstufe.site</a>
+    <div class="header-buttons">
+      <button class="header-btn" id="sakuraToggle">Sakura an/aus</button>
+      <button class="header-btn" id="themeToggle">Theme</button>
+      <div class="settings-wrapper">
+        <button class="setting-btn" id="settingsToggle" aria-label="Einstellungen">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </button>
+        <div class="settings-menu glass-effect" id="settingsMenu">
+          <a class="settings-item" href="admin/">Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav glass-effect">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link">Homepage</a></li>
+      <li><a href="powerpoints.html" class="nav-link">Powerpoints</a></li>
+      <li><a href="videos.html" class="nav-link">Videos</a></li>
+      <li><a href="taskcards.html" class="nav-link">Taskcards</a></li>
+      <li><a href="spiele.html" class="nav-link">Spiele</a></li>
+    </ul>
+  </nav>
+
+  <main class="panels" style="margin-top:120px;">
+    <section class="panel glass-effect">
+      <h1>Willkommen zu Oberstufe.site</h1>
+      <p>Taskcards</p>
+    </section>
+
+    <section class="panel glass-effect">
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Suche nach Titel, Beschreibung, Autor oder Fach...">
+      </div>
+      <div class="tag-filter" id="tagFilter"></div>
+    </section>
+
+    <section class="grid2" id="cardsGrid"></section>
+  </main>
+
+  <footer>
+    <p>© 2025 Oberstufe.site</p>
+    <div class="footer-cta">
+      <a href="projekt.html"><button class="button-85" role="button">Projekt einreichen</button></a>
+    </div>
+  </footer>
+
+  <script>
+    window.DATASET = "taskcards";
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
