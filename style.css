@@ -242,3 +242,56 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
+/* === Fix: Statischer Hintergrund + scrollender Inhalt === */
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Fixierter Hintergrund über Pseudo-Element */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("fuji-bg.jpg") center / cover no-repeat;
+    z-index: -1; /* liegt hinter allem anderen */
+    will-change: transform;
+}
+
+/* Sakura-Container als Overlay über dem fixen Hintergrund,
+   aber unter dem eigentlichen Content */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Der restliche Content liegt darüber */
+header, main, footer, .content, .container {
+    position: relative;
+    z-index: 1;
+    /* optional: leichte, halbtransparente Hintergründe für bessere Lesbarkeit */
+    /* background: rgba(255, 255, 255, 0.6); */
+    /* backdrop-filter: blur(2px); */
+}
+
+/* Optional: Standard-Textfarbe sicherstellen */
+body, p, h1, h2, h3, h4, h5, h6, li, a, button, input {
+    color: #111;
+}
+
+/* Dark-Theme unterstützt ebenfalls den fixen BG,
+   nur Textfarben und ggf. Flächen anpassen */
+.dark-theme body, .dark-theme p, .dark-theme h1, .dark-theme h2, .dark-theme h3,
+.dark-theme h4, .dark-theme h5, .dark-theme h6, .dark-theme li, .dark-theme a {
+    color: #f1f1f1;
+}
